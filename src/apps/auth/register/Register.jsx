@@ -44,7 +44,7 @@ const Register = () => {
   return (
     <Components.Container>
       <section className={cls.register_page}>
-        <div className={cls.register_page_card}>
+        <div className={cls.register_page_card} data-aos="zoom-in-right">
           <Components.Image src={Logo}/>
 
           <h3>Зарегистрируйтесь, чтобы смотреть фото и видео от друзей.</h3>
@@ -120,7 +120,7 @@ const Register = () => {
               <Components.Forms.Errors err={errors?.password_repeat ? "err" : "success"}/>
             </Components.Forms.Divider>
             
-            <p className={cls.useable_service}>
+            <p className={cls.useable_service} >
               Люди, которые пользуются нашим сервисом, могли загрузить вашу контактную информацию в Instagram.
               <a href="https://www.facebook.com/help/instagram/261704639352628"> Узнать больше</a>
             </p>
@@ -132,14 +132,8 @@ const Register = () => {
             </Components.Forms.Divider>
           </form>
         </div>
-        <div className={cls.register_page_bottom_card}>
-          <p>
-            Есть аккаунт?
-            <Link to={AuthPath.login}>
-              Вход
-            </Link>
-          </p>
-        </div>
+        
+        <Components.Forms.AuthNavigate location={"register"}/>
       </section>
     </Components.Container>
   )
