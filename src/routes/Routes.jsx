@@ -1,9 +1,10 @@
 
-import Aos from 'aos';
 import React from 'react';
+import Aos from 'aos';
 import { Route  , Routes as Swicth} from 'react-router-dom';
 import { Routers } from '../pages';
 import { Apps } from '../services/path';
+import { Components } from '../components';
 import "aos/dist/aos.css"
 
 const Routes = () => {
@@ -16,9 +17,10 @@ const Routes = () => {
 
   return (
     <React.Fragment>
-      <React.Suspense fallback={<h1>Loading...</h1>}>
+      <React.Suspense fallback={Components.Loader}>
         <Swicth>
           <Route path={Apps.accounts} element={<Routers.AuthRoutes />}/>
+          <Route path={Apps.layout} element={<Routers.LayoutRoutes />}/>
         </Swicth>
       </React.Suspense>
     </React.Fragment>

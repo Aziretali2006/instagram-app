@@ -13,3 +13,8 @@ export const AuthPath = {
   login: "/accounts/authentification",
   register: "/accounts/registration"
 }
+
+
+export const Layout = {
+  home: "/"
+}
