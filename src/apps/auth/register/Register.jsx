@@ -1,14 +1,12 @@
-
+    
 import React from 'react';
-import Logo from "../../../assets/images/logo/insta.png"
 import { useForm } from 'react-hook-form';
 import { Components } from '../../../components';
-import { Link } from 'react-router-dom';
 import { FormsValidate } from '../../../helpers/Forms';
 import { REQUEST } from '../../../api';
 import { Hooks } from '../../../hooks';
-import { AuthPath } from '../../../services/path';
 
+import Logo from "../../../assets/images/logo/insta.png";
 import cls from "../../../assets/styles/register/Register.module.scss";
 
 const Register = () => {
@@ -37,7 +35,6 @@ const Register = () => {
           goToLogin()
         })
     }
-
 
   }
 
