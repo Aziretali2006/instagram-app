@@ -1,14 +1,23 @@
 import { AiFillHome , AiOutlineSearch , AiOutlineHeart} from "react-icons/ai";
 import { BsCameraReels } from "react-icons/bs";
-import { FiEdit3 } from "react-icons/fi";
+import { FiEdit3 , FiUsers} from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { BiUserCircle } from "react-icons/bi"
+import { Layout } from "../services/path";
 
 
 export const SidebarList = [
   {
     id:1,
     caption: "Главная",
-    icon: AiFillHome
+    icon: AiFillHome,
+    route: Layout.home
+  },
+  {
+    id: 32,
+    caption: "Пользователи",
+    icon: FiUsers,
+    route: Layout.users
   },
   {
     id:2,
@@ -29,6 +38,12 @@ export const SidebarList = [
     id:5,
     caption: "Создать ",
     icon: FiEdit3
+  },
+  {
+    id:55,
+    caption: "Профиль ",
+    icon: BiUserCircle,
+    route: Layout.profile
   },
   {
     id:6,

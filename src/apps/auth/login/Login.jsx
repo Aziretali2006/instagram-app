@@ -5,12 +5,14 @@ import { useForm } from 'react-hook-form';
 import { FormsValidate } from '../../../helpers/Forms';
 import { REQUEST } from '../../../api';
 import { Hooks } from '../../../hooks';
+import { Providers } from '../../../providers';
 
 import Logo from "../../../assets/images/logo/insta.png";
 import cls from "../../../assets/styles/login/Login.module.scss";
 
 const Login = () => {
-  const { goToHome } = Hooks.useLocations()
+  const { goToHome } = Hooks.useLocations();
+  const { setState } = Providers.useAuth(); 
 
   const {
     register,
@@ -21,17 +23,17 @@ const Login = () => {
   })
 
   const onSubmit = (data) => {
-    
+    setState("Recovery!")
     if(data) {
       const request = REQUEST.LOGIN_USER(data);
 
       request 
         .then(res => {
           const data = res.data;
-          
           localStorage.setItem("access" , data.access);
           localStorage.setItem("refresh" , data.refresh);
           goToHome();
+          setState("Logged in!")
         })
     }
   }

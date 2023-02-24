@@ -4,7 +4,7 @@ import { Components } from '../../../components';
 function Home() {
   return (
     <Components.Container>
-      <h1>HOME</h1>
+      <Components.Posts />
     </Components.Container>
   )
 }

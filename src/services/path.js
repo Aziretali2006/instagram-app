@@ -4,6 +4,8 @@ export const Apps = {
   layout: "/*"
 };
 
+// AUTH
+
 export const Auth = {
   register: "registration",
   login: "authentification"
@@ -14,7 +16,12 @@ export const AuthPath = {
   register: "/accounts/registration"
 }
 
+// LAYOUT
 
 export const Layout = {
-  home: "/"
+  home: "/",
+  profile: "/profile",
+  profileID: "/profile/:id",
+  users: "/users",
+  subscribers: "/subs/:mode"
 }

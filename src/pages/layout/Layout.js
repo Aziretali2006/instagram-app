@@ -1,10 +1,10 @@
-import React from 'react'
-import { Route , Routes as Switch} from 'react-router-dom'
-import { Components } from '../../components'
-import { Hooks } from '../../hooks'
-import { Providers } from '../../providers'
-import { Layout } from '../../services/path'
-import { LayoutPages } from '../Lazy'
+import React from 'react';
+import { Route , Routes as Switch} from 'react-router-dom';
+import { Components } from '../../components';
+import { Hooks } from '../../hooks';
+import { Providers } from '../../providers';
+import { Layout } from '../../services/path';
+import { LayoutPages } from '../Lazy';
 
 function Layouts() {
   const { token } = Providers.useAuth();
@@ -25,6 +25,10 @@ function Layouts() {
         <div className='layout_routes'>
         <Switch>
           <Route path={Layout.home} element={<LayoutPages.Home />}/>
+          <Route path={Layout.profile} element={<LayoutPages.Profile />}/>
+          <Route path={Layout.users} element={<LayoutPages.Users />}/>
+          <Route path={Layout.profileID} element={<LayoutPages.Profile />}/>
+          <Route path={Layout.subscribers} element={<LayoutPages.Subscribers />}/>
         </Switch>
         </div>
       </section>
@@ -32,4 +36,4 @@ function Layouts() {
   )
 }
 
-export default Layouts
+export default Layouts;
